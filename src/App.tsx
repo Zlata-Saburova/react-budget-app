@@ -9,10 +9,10 @@ function App() {
   return (
     <StyledApp>
       <Container>
-        <SelContainer>
+        <TitleContainer>
           <Title>Budget App</Title>
           <CustomSelect />
-        </SelContainer>
+        </TitleContainer>
         <Card type="budget">
           Budget: $3000 <CardButton>Edit</CardButton>
         </Card>
@@ -30,7 +30,7 @@ const StyledApp = styled.div`
   margin-top: 30px;
 `;
 
-const SelContainer = styled.div`
+const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
