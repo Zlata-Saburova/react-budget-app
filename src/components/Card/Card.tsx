@@ -1,9 +1,11 @@
 import { StyledCard } from "./StyledCard";
+import { ReactNode } from "react";
 
 interface IProps {
-  children: string;
   type: string;
+  children: ReactNode;
 }
-export const Card = ({ children, type }: IProps) => {
+
+export const Card: React.FC<IProps> = ({ type, children }) => {
   return <StyledCard type={type}>{children}</StyledCard>;
 };

@@ -4,6 +4,9 @@ interface IProps {
   type: string;
 }
 export const StyledCard = styled.div<IProps>`
+  display: flex;
+  justify-content: space-between;
+
   width: 100%;
   padding-top: 36px;
   padding-bottom: 40px;
