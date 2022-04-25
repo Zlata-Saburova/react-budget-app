@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Card } from "./components/Card/Card";
 import { Container } from "./components/Container/ContainerStyle";
 import { Title } from "./components/Title/Title";
 
@@ -7,6 +8,9 @@ function App() {
     <StyledApp>
       <Container>
         <Title>Budget App</Title>
+        <Card isBudget>Budget: $3000</Card>
+        <Card isRemaining>Remaining: $2000</Card>
+        <Card >Spent so far: $1000</Card>
       </Container>
     </StyledApp>
   );
