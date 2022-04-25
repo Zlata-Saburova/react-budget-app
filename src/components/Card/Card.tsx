@@ -2,13 +2,8 @@ import { StyledCard } from "./StyledCard";
 
 interface IProps {
   children: string;
-  isBudget?: true;
-  isRemaining?: true;
+  type: string;
 }
-export const Card = ({ children, isBudget, isRemaining}: IProps) => {
-  return (
-    <StyledCard isBudget={isBudget} isRemaining={isRemaining} >
-      {children}
-    </StyledCard>
-  );
+export const Card = ({ children, type }: IProps) => {
+  return <StyledCard type={type}>{children}</StyledCard>;
 };

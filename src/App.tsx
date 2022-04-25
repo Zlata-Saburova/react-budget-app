@@ -8,9 +8,9 @@ function App() {
     <StyledApp>
       <Container>
         <Title>Budget App</Title>
-        <Card isBudget>Budget: $3000</Card>
-        <Card isRemaining>Remaining: $2000</Card>
-        <Card >Spent so far: $1000</Card>
+        <Card type="budget">Budget: $3000</Card>
+        <Card type="remaining">Remaining: $2000</Card>
+        <Card type="spent">Spent so far: $1000</Card>
       </Container>
     </StyledApp>
   );
