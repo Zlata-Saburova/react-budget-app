@@ -19,15 +19,17 @@ function App() {
         <Card type="remaining">Remaining: $2000</Card>
         <Card type="spent">Spent so far: $1000</Card>
       </Container>
+      <Container>
+        <Title>Expenses</Title>
+      </Container>
     </StyledApp>
   );
 }
 
 const StyledApp = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   margin-top: 30px;
+  gap: 30px;
 `;
 
 const TitleContainer = styled.div`
