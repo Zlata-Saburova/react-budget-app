@@ -3,12 +3,16 @@ import { Card } from "./components/Card/Card";
 import { Container } from "./components/Container/ContainerStyle";
 import { Title } from "./components/Title/Title";
 import { CardButton } from "./components/CardButton/CardButton";
+import { CustomSelect } from "./components/CustomSelect/Select";
 
 function App() {
   return (
     <StyledApp>
       <Container>
-        <Title>Budget App</Title>
+        <SelContainer>
+          <Title>Budget App</Title>
+          <CustomSelect />
+        </SelContainer>
         <Card type="budget">
           Budget: $3000 <CardButton>Edit</CardButton>
         </Card>
@@ -24,6 +28,12 @@ const StyledApp = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+`;
+
+const SelContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default App;
