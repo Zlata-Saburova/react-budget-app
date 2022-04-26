@@ -7,6 +7,7 @@ import { CustomSelect } from "./components/CustomSelect/Select";
 import { SearchInput } from "./components/SearchInput/SearchInput";
 import { List } from "./components/List/List";
 import { ListItem } from "./components/ListItem/ListItem";
+import { Badge } from "./components/Badge/Badge";
 
 function App() {
   return (
@@ -26,10 +27,18 @@ function App() {
         <Title>Expenses</Title>
         <SearchInput />
         <List>
-          <ListItem>shoping</ListItem>
-          <ListItem>drinking</ListItem>
-          <ListItem>relax</ListItem>
-          <ListItem>study</ListItem>
+          <ListItem>
+            shoping <Badge>$100</Badge>
+          </ListItem>
+          <ListItem>
+            drinking <Badge>$200</Badge>
+          </ListItem>
+          <ListItem>
+            relax <Badge>$500</Badge>
+          </ListItem>
+          <ListItem>
+            study <Badge>$400</Badge>
+          </ListItem>
         </List>
       </Container>
     </StyledApp>
