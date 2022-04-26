@@ -1,5 +1,10 @@
+import { ReactNode } from "react";
 import { StyledList } from "./StyledList";
 
-export const List = () => {
-  return <StyledList />;
+interface IProps {
+  children: ReactNode;
+}
+
+export const List: React.FC<IProps> = ({ children }) => {
+  return <StyledList>{children}</StyledList>;
 };
