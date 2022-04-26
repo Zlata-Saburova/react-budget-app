@@ -4,6 +4,7 @@ import { Container } from "./components/Container/ContainerStyle";
 import { Title } from "./components/Title/Title";
 import { CardButton } from "./components/CardButton/CardButton";
 import { CustomSelect } from "./components/CustomSelect/Select";
+import { SearchInput } from "./components/SearchInput/SearchInput";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </Container>
       <Container>
         <Title>Expenses</Title>
+        <SearchInput />
       </Container>
     </StyledApp>
   );
