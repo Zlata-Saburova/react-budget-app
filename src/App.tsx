@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Card } from "./components/Card/Card";
 import { Container } from "./components/Container/StyledContainer";
-import { Title } from "./components/Title/Title";
+import { StyledTitle } from "./components/Title/StyledTitle";
 import { CardButton } from "./components/CardButton/CardButton";
 import { CustomSelect } from "./components/CustomSelect/Select";
 import { SearchInput } from "./components/SearchInput/SearchInput";
@@ -13,12 +13,12 @@ import { Form } from "./components/Form/Form";
 import { Input } from "./components/Input/Input";
 import { FormButton } from "./components/FormButton/FormButton";
 
-function App() {
+const App = () => {
   return (
     <StyledApp>
       <Container>
         <TitleContainer>
-          <Title>Budget App</Title>
+          <StyledTitle>Budget App</StyledTitle>
           <CustomSelect />
         </TitleContainer>
         <Card type="budget">
@@ -28,7 +28,7 @@ function App() {
         <Card type="spent">Spent so far: $1000</Card>
       </Container>
       <Container>
-        <Title>Expenses</Title>
+        <StyledTitle>Expenses</StyledTitle>
         <SearchInput />
         <List>
           <ListItem>
@@ -46,7 +46,7 @@ function App() {
         </List>
       </Container>
       <Container>
-        <Title>Add Expense</Title>
+        <StyledTitle>Add Expense</StyledTitle>
         <Form>
           <Input name="name" type="text" />
           <Input name="cost" type="number" />
@@ -55,12 +55,13 @@ function App() {
       </Container>
     </StyledApp>
   );
-}
+};
 
 const StyledApp = styled.div`
   display: grid;
-  margin-top: 30px;
   gap: 30px;
+
+  margin-top: 30px;
 `;
 
 const TitleContainer = styled.div`
