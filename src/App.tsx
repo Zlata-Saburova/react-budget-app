@@ -9,6 +9,8 @@ import { List } from "./components/List/List";
 import { ListItem } from "./components/ListItem/ListItem";
 import { Badge } from "./components/Badge/Badge";
 import { Cross } from "./components/Cross/Cross";
+import { Form } from "./components/Form/Form";
+import { Input } from "./components/Input/Input";
 
 function App() {
   return (
@@ -41,6 +43,13 @@ function App() {
             study <Badge>$400</Badge> <Cross />
           </ListItem>
         </List>
+      </Container>
+      <Container>
+        <Title>Add Expense</Title>
+        <Form>
+          <Input name="name" type="text" />
+          <Input name="cost" type="number" />
+        </Form>
       </Container>
     </StyledApp>
   );
