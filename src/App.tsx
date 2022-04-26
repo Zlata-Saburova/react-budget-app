@@ -6,6 +6,7 @@ import { CardButton } from "./components/CardButton/CardButton";
 import { CustomSelect } from "./components/CustomSelect/Select";
 import { SearchInput } from "./components/SearchInput/SearchInput";
 import { List } from "./components/List/List";
+import { ListItem } from "./components/ListItem/ListItem";
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
       <Container>
         <Title>Expenses</Title>
         <SearchInput />
-        <List></List>
+        <List>
+          <ListItem>shoping</ListItem>
+        </List>
       </Container>
     </StyledApp>
   );
