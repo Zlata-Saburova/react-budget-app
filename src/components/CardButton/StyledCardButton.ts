@@ -13,4 +13,15 @@ export const StyledCardButton = styled.button`
 
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
+
+  cursor: pointer;
+
+  transition: box-shadow 0.4s, background-color 0.3s;
+  &:hover {
+    box-shadow: 2px 2px 15px rgba(33, 28, 28, 32%);
+  }
+
+  &:active {
+    background-color: rgb(245 242 242);
+  }
 `;
