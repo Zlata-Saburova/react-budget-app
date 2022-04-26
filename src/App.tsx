@@ -8,6 +8,7 @@ import { SearchInput } from "./components/SearchInput/SearchInput";
 import { List } from "./components/List/List";
 import { ListItem } from "./components/ListItem/ListItem";
 import { Badge } from "./components/Badge/Badge";
+import { Cross } from "./components/Cross/Cross";
 
 function App() {
   return (
@@ -28,16 +29,16 @@ function App() {
         <SearchInput />
         <List>
           <ListItem>
-            shoping <Badge>$100</Badge>
+            shoping <Badge>$100</Badge> <Cross />
           </ListItem>
           <ListItem>
-            drinking <Badge>$200</Badge>
+            drinking <Badge>$200</Badge> <Cross />
           </ListItem>
           <ListItem>
-            relax <Badge>$500</Badge>
+            relax <Badge>$500</Badge> <Cross />
           </ListItem>
           <ListItem>
-            study <Badge>$400</Badge>
+            study <Badge>$400</Badge> <Cross />
           </ListItem>
         </List>
       </Container>
