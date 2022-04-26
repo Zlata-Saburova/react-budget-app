@@ -11,6 +11,7 @@ import { Badge } from "./components/Badge/Badge";
 import { Cross } from "./components/Cross/Cross";
 import { Form } from "./components/Form/Form";
 import { Input } from "./components/Input/Input";
+import { FormButton } from "./components/FormButton/FormButton";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Form>
           <Input name="name" type="text" />
           <Input name="cost" type="number" />
+          <FormButton>Done</FormButton>
         </Form>
       </Container>
     </StyledApp>
