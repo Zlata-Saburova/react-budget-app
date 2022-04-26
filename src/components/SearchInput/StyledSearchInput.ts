@@ -17,7 +17,6 @@ export const SearchInputStyle = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-
     color: rgb(153, 153, 153);
   }
 `;

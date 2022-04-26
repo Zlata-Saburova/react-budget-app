@@ -14,8 +14,8 @@ export const StyledFormButton = styled.button`
   background-color: rgb(35, 201, 255);
   border-radius: 10px;
 
-  cursor: pointer;
   transition: box-shadow 0.4s, background-color 0.3s;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 2px 2px 15px rgba(33, 28, 28, 32%);

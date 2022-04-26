@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledCross = styled.div`
   position: relative;
   justify-self: right;
+  
   height: 20px;
   width: 20px;
 
