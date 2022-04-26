@@ -27,6 +27,9 @@ function App() {
         <SearchInput />
         <List>
           <ListItem>shoping</ListItem>
+          <ListItem>drinking</ListItem>
+          <ListItem>relax</ListItem>
+          <ListItem>study</ListItem>
         </List>
       </Container>
     </StyledApp>
