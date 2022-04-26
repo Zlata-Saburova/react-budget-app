@@ -6,6 +6,8 @@ export const StyledCross = styled.div`
   height: 20px;
   width: 20px;
 
+  cursor: pointer;
+
   &::before,
   &::after {
     content: "";
@@ -24,5 +26,13 @@ export const StyledCross = styled.div`
 
   &::after {
     transform: rotate(135deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
   }
 `;
