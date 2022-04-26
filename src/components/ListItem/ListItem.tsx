@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import { StyledListItem } from "./StyledListItem";
 
 interface IProps {
-  children: string;
+  children: ReactNode;
 }
 
-export const ListItem = ({ children }: IProps) => {
+export const ListItem: React.FC<IProps> = ({ children }) => {
   return <StyledListItem>{children}</StyledListItem>;
 };
