@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Card } from "./components/Card/Card";
-import { Container } from "./components/Container/ContainerStyle";
+import { Container } from "./components/Container/StyledContainer";
 import { Title } from "./components/Title/Title";
 import { CardButton } from "./components/CardButton/CardButton";
 import { CustomSelect } from "./components/CustomSelect/Select";
