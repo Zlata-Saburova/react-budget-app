@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { StyledListItem } from "./StyledListItem";
+import { StyledListItem } from "./styles";
 
 interface IProps {
   children: ReactNode;

@@ -1,4 +1,4 @@
-import { StyledTitle } from "./StyledTitle";
+import { StyledTitle } from "./styles";
 
 interface IProps {
   children: string;

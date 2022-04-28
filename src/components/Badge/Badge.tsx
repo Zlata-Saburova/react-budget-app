@@ -1,4 +1,4 @@
-import { StyledBadge } from "./StyledBadge";
+import { StyledBadge } from "./styles";
 
 interface IProps {
   children: string;

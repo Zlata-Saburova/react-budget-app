@@ -1,4 +1,4 @@
-import { StyledCross } from "./StyledCross";
+import { StyledCross } from "./styles";
 
 export const Cross = () => {
   return <StyledCross />;

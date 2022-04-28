@@ -1,4 +1,4 @@
-import { StyledCard } from "./StyledCard";
+import { StyledCard } from "./styles";
 import { ReactNode } from "react";
 
 interface IProps {

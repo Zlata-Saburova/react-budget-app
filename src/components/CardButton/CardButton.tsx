@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { StyledCardButton } from "./StyledCardButton";
+import { StyledCardButton } from "./styles";
 
 interface Iprops {
   children: ReactNode;

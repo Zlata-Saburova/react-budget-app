@@ -1,4 +1,4 @@
-import { StyledFormButton } from "./StyledFormButton";
+import { StyledFormButton } from "./styles";
 
 interface IProps {
   children: string;
