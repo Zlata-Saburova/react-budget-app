@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Card } from "./components/Card/Card";
 import { Container } from "./components/Container/StyledContainer";
-import { StyledTitle } from "./components/Title/StyledTitle";
 import { CardButton } from "./components/CardButton/CardButton";
 import { CustomSelect } from "./components/CustomSelect/Select";
 import { SearchInput } from "./components/SearchInput/SearchInput";
@@ -12,13 +11,14 @@ import { Cross } from "./components/Cross/Cross";
 import { Form } from "./components/Form/Form";
 import { Input } from "./components/Input/Input";
 import { FormButton } from "./components/FormButton/FormButton";
+import { Title } from "./components/Title/Title";
 
 const App = () => {
   return (
     <StyledApp>
       <Container>
         <TitleContainer>
-          <StyledTitle>Budget App</StyledTitle>
+          <Title>Budget App</Title>
           <CustomSelect />
         </TitleContainer>
         <Card type="budget">
@@ -28,7 +28,7 @@ const App = () => {
         <Card type="spent">Spent so far: $1000</Card>
       </Container>
       <Container>
-        <StyledTitle>Expenses</StyledTitle>
+        <Title>Expenses</Title>
         <SearchInput />
         <List>
           <ListItem>
@@ -46,7 +46,7 @@ const App = () => {
         </List>
       </Container>
       <Container>
-        <StyledTitle>Add Expense</StyledTitle>
+        <Title>Add Expense</Title>
         <Form>
           <Input name="name" type="text" />
           <Input name="cost" type="number" />
