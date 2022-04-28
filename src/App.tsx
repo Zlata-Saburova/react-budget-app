@@ -7,7 +7,7 @@ import { SearchInput } from "./components/SearchInput/SearchInput";
 import { List } from "./components/List/List";
 import { ListItem } from "./components/ListItem/ListItem";
 import { Badge } from "./components/Badge/Badge";
-import { Cross } from "./components/Cross/Cross";
+import { Close } from "./components/Close/Close";
 import { Form } from "./components/Form/Form";
 import { Title } from "./components/Title/Title";
 
@@ -30,16 +30,16 @@ const App = () => {
         <SearchInput />
         <List>
           <ListItem>
-            shoping <Badge>$100</Badge> <Cross />
+            shoping <Badge>$100</Badge> <Close />
           </ListItem>
           <ListItem>
-            drinking <Badge>$200</Badge> <Cross />
+            drinking <Badge>$200</Badge> <Close />
           </ListItem>
           <ListItem>
-            relax <Badge>$500</Badge> <Cross />
+            relax <Badge>$500</Badge> <Close />
           </ListItem>
           <ListItem>
-            study <Badge>$400</Badge> <Cross />
+            study <Badge>$400</Badge> <Close />
           </ListItem>
         </List>
       </Container>
