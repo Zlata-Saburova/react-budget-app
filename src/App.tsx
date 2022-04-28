@@ -9,8 +9,6 @@ import { ListItem } from "./components/ListItem/ListItem";
 import { Badge } from "./components/Badge/Badge";
 import { Cross } from "./components/Cross/Cross";
 import { Form } from "./components/Form/Form";
-import { Input } from "./components/Input/Input";
-import { FormButton } from "./components/FormButton/FormButton";
 import { Title } from "./components/Title/Title";
 
 const App = () => {
@@ -47,11 +45,7 @@ const App = () => {
       </Container>
       <Container>
         <Title>Add Expense</Title>
-        <Form>
-          <Input name="name" type="text" />
-          <Input name="cost" type="number" />
-          <FormButton>Done</FormButton>
-        </Form>
+        <Form></Form>
       </Container>
     </StyledApp>
   );
