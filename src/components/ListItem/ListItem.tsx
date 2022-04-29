@@ -4,13 +4,13 @@ import { Close } from "../Close/Close";
 import { StyledListItem } from "./styles";
 
 interface IProps {
-  expense: IExpenses;
+  buy: IExpenses;
 }
 
-export const ListItem: React.FC<IProps> = ({ expense }) => {
+export const ListItem: React.FC<IProps> = ({ buy }) => {
   return (
     <StyledListItem>
-      {expense.name} <Badge cost={expense.cost} /> <Close />
+      {buy.name} <Badge cost={buy.cost} /> <Close />
     </StyledListItem>
   );
 };
