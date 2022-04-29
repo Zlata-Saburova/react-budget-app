@@ -1,5 +1,4 @@
 import { createContext, FC, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import {
   IExpenses,
   IExpensesContex,
@@ -14,10 +13,7 @@ export const ExpensesContext = createContext<IExpensesContex>({
 const useExpensesContexValue = () => {
   const [expensesContext, setExpensesContext] = useState<IExpensesContex>(
     () => ({
-      expenses: [
-        { id: uuidv4(), name: "ps5", cost: 5868 },
-        { id: uuidv4(), name: "table", cost: 568 },
-      ],
+      expenses: [],
       setExpenses: (newExpenses: IExpenses[]) => {
         setExpensesContext((ctx) => ({ ...ctx, expenses: newExpenses }));
       },
