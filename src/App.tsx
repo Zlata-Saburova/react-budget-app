@@ -5,9 +5,6 @@ import { CardButton } from "./components/CardButton/CardButton";
 import { CustomSelect } from "./components/CustomSelect/Select";
 import { SearchInput } from "./components/SearchInput/SearchInput";
 import { List } from "./components/List/List";
-import { ListItem } from "./components/ListItem/ListItem";
-import { Badge } from "./components/Badge/Badge";
-import { Close } from "./components/Close/Close";
 import { Form } from "./components/Form/Form";
 import { Title } from "./components/Title/Title";
 
@@ -28,20 +25,7 @@ const App = () => {
       <Container>
         <Title>Expenses</Title>
         <SearchInput />
-        <List>
-          <ListItem>
-            shoping <Badge>$100</Badge> <Close />
-          </ListItem>
-          <ListItem>
-            drinking <Badge>$200</Badge> <Close />
-          </ListItem>
-          <ListItem>
-            relax <Badge>$500</Badge> <Close />
-          </ListItem>
-          <ListItem>
-            study <Badge>$400</Badge> <Close />
-          </ListItem>
-        </List>
+        <List></List>
       </Container>
       <Container>
         <Title>Add Expense</Title>
