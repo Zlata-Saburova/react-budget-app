@@ -1,10 +1,15 @@
-import { ReactNode } from "react";
+import { useContext } from "react";
+import { ExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
+import { ListItem } from "../ListItem/ListItem";
 import { StyledList } from "./styles";
 
-interface IProps {
-  children: ReactNode;
-}
-
-export const List: React.FC<IProps> = ({ children }) => {
-  return <StyledList>{children}</StyledList>;
+export const List = () => {
+  const { expenses } = useContext(ExpensesContext);
+  return (
+    <StyledList>
+      {expenses.map((expense) => {
+        return <ListItem expense={expense}></ListItem>;
+      })}
+    </StyledList>
+  );
 };

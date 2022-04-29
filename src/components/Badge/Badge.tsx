@@ -1,9 +1,9 @@
 import { StyledBadge } from "./styles";
 
 interface IProps {
-  children: string;
+  cost: number;
 }
 
-export const Badge = ({ children }: IProps) => {
-  return <StyledBadge>{children}</StyledBadge>;
+export const Badge = ({ cost }: IProps) => {
+  return <StyledBadge>{`$${cost}`}</StyledBadge>;
 };
