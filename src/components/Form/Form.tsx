@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
+import { ExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
 import { FormButton } from "../FormButton/FormButton";
 import { StyledForm } from "./styles";
+import { v4 as uuidv4 } from "uuid";
 
 type FormValues = {
   name: string;
@@ -10,9 +13,14 @@ type FormValues = {
 
 export const Form = () => {
   const { register, handleSubmit, reset } = useForm<FormValues>();
+  const { expenses, setExpenses } = useContext(ExpensesContext);
 
-  const onSubmit: SubmitHandler<FormValues> = (expense) => {
-    console.log(expense);
+  const onSubmit: SubmitHandler<FormValues> = (buy) => {
+    setExpenses([
+      ...expenses,
+      { id: uuidv4(), name: buy.name, cost: +buy.cost },
+    ]);
+
     reset();
   };
 
