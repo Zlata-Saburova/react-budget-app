@@ -8,7 +8,7 @@ export const List = () => {
   return (
     <StyledList>
       {expenses.map((expense) => {
-        return <ListItem expense={expense}></ListItem>;
+        return <ListItem key={expense.id} expense={expense}></ListItem>;
       })}
     </StyledList>
   );
