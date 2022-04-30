@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
 import { IExpenses } from "../../context/ExpensesContext/types";
 import { Badge } from "../Badge/Badge";
