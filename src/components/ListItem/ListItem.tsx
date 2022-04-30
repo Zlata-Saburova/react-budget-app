@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { ExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
+import { useExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
 import { IExpenses } from "../../context/ExpensesContext/types";
 import { Badge } from "../Badge/Badge";
 import { Close } from "../Close/Close";
@@ -10,7 +9,7 @@ interface IProps {
 }
 
 export const ListItem: React.FC<IProps> = ({ buy }) => {
-  const { expenses, setExpenses } = useContext(ExpensesContext);
+  const { expenses, setExpenses } = useExpensesContext();
 
   const deleteBuy = () => {
     const newExpenses = expenses.filter((expense) => expense.id !== buy.id);
