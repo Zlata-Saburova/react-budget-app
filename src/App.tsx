@@ -7,8 +7,16 @@ import { SearchInput } from "./components/SearchInput/SearchInput";
 import { List } from "./components/List/List";
 import { Form } from "./components/Form/Form";
 import { Title } from "./components/Title/Title";
+import { useState } from "react";
+import { CardInput } from "./components/CardInput/CardInput";
 
 const App = () => {
+  const [isEdit, setIsEdit] = useState(true);
+
+  const handleButton = () => {
+    setIsEdit(!isEdit);
+  };
+
   return (
     <StyledApp>
       <Container>
@@ -16,8 +24,11 @@ const App = () => {
           <Title>Budget App</Title>
           <CustomSelect />
         </TitleContainer>
-        <Card type="budget">
-          Budget: $3000 <CardButton>Edit</CardButton>
+        <Card isEdit type="budget">
+          {isEdit ? <CardInput /> : "Budget: $3000"}
+          <CardButton handleButton={handleButton}>
+            {isEdit ? "Save" : "Edit"}
+          </CardButton>
         </Card>
         <Card type="remaining">Remaining: $2000</Card>
         <Card type="spent">Spent so far: $1000</Card>
