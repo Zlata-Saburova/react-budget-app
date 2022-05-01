@@ -12,6 +12,7 @@ import { CardInput } from "./components/CardInput/CardInput";
 import { useBudgetContext } from "./context/BudgetContext/BudgetContext";
 import { SaveButton } from "./components/SaveButton/SaveButton";
 import { useExpensesContext } from "./context/ExpensesContext/ExpensesContext";
+import { useCurrencyContex } from "./context/CurrencyContext/CurrencyContext";
 
 const App = () => {
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -61,6 +62,7 @@ const App = () => {
     }
   }, [spent, budget]);
 
+  const { currency } = useCurrencyContex();
   return (
     <StyledApp>
       <Container>
@@ -72,7 +74,7 @@ const App = () => {
           {isEdit ? (
             <CardInput handleInput={handleInput} />
           ) : (
-            `Budget: $${budget}`
+            `Budget: ${currency}${budget}`
           )}
           {isEdit ? (
             <SaveButton handleSaveButton={handleSaveButton}>Save</SaveButton>
@@ -82,10 +84,13 @@ const App = () => {
         </Card>
         <Card type={type}>
           {type === "remaining"
-            ? `Remaining: $${remaining}`
-            : `Overspending by $${overspent}`}
+            ? `Remaining: ${currency}${remaining}`
+            : `Overspending by ${currency}${overspent}`}
         </Card>
-        <Card type="spent">Spent so far: ${spent}</Card>
+        <Card type="spent">
+          Spent so far: {currency}
+          {spent}
+        </Card>
       </Container>
       <Container>
         <Title>Expenses</Title>

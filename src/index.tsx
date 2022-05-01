@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { BudgetContextProvider } from "./context/BudgetContext/BudgetContext";
+import { CurrencyContextProvider } from "./context/CurrencyContext/CurrencyContext";
 import { ExpensesContextProvider } from "./context/ExpensesContext/ExpensesContext";
 // import { ExpensesContextProvider } from "./context/ExpensesContext/ExpensesContext";
 import GlobalStyles from "./GlobalStyles";
@@ -16,8 +17,10 @@ root.render(
   <React.StrictMode>
     <BudgetContextProvider>
       <ExpensesContextProvider>
-        <GlobalStyles />
-        <App />
+        <CurrencyContextProvider>
+          <GlobalStyles />
+          <App />
+        </CurrencyContextProvider>
       </ExpensesContextProvider>
     </BudgetContextProvider>
   </React.StrictMode>
