@@ -8,7 +8,3 @@ export interface IBudgetContext {
   budget: number;
   setBudget: (newBudget: number) => void;
 }
-
-// export interface IBudget {
-//   budget: number;
-// }
