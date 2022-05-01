@@ -16,14 +16,17 @@ export const StyledCard = styled.div<IProps>`
   font-size: 20px;
   line-height: 24px;
 
-  background-color: ${({ type }) => {
+  ${({ type }) => {
     switch (type) {
       case "budget":
-        return "rgb(124, 198, 254)";
+        return `background-color: rgb(124, 198, 254)`;
       case "remaining":
-        return "rgb(204, 213, 255)";
+        return `background-color: rgb(204, 213, 255)`;
+      case "overspending":
+        return `background-color: rgb(255, 0, 0); 
+        color: rgb(255, 255, 255)`;
       default:
-        return "rgb(231, 187, 227)";
+        return `background-color: rgb(231, 187, 227)`;
     }
   }};
 
