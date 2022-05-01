@@ -13,13 +13,13 @@ import { useBudgetContext } from "./context/BudgetContext/BudgetContext";
 import { SaveButton } from "./components/SaveButton/SaveButton";
 
 const App = () => {
-  const [isEdit, setIsEdit] = useState(true);
+  const [isEdit, setIsEdit] = useState<boolean>(true);
 
   const handleEditButton = () => {
     setIsEdit(!isEdit);
   };
 
-  const [inputValue, setInputValue] = useState(0);
+  const [inputValue, setInputValue] = useState<number>(0);
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(+e.target.value);

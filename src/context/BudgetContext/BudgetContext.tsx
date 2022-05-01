@@ -17,7 +17,7 @@ const useBudgetContextValue = () => {
   return budgetContext;
 };
 
-export const useBudgetContext = () => useContext(BudgetContext);
+export const useBudgetContext = () => useContext<IBudgetContext>(BudgetContext);
 
 export const BudgetContextProvider = ({
   children,
