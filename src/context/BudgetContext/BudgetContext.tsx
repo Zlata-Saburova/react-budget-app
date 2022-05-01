@@ -8,7 +8,7 @@ const BudgetContext = createContext<IBudgetContext>({
 
 const useBudgetContextValue = () => {
   const [budgetContext, setBudgetContext] = useState<IBudgetContext>(() => ({
-    budget: 0,
+    budget: 3000,
     setBudget: (newBudget) => {
       setBudgetContext((ctx) => ({ ...ctx, budget: newBudget }));
     },

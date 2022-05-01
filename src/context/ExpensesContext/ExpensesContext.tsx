@@ -4,6 +4,7 @@ import {
   IExpensesContex,
   IExpensesContexProviderProprs,
 } from "./types";
+import { v4 as uuidv4 } from "uuid";
 
 const ExpensesContext = createContext<IExpensesContex>({
   expenses: [],
@@ -14,7 +15,10 @@ const ExpensesContext = createContext<IExpensesContex>({
 const useExpensesContexValue = () => {
   const [expensesContext, setExpensesContext] = useState<IExpensesContex>(
     () => ({
-      expenses: [],
+      expenses: [
+        { id: uuidv4(), name: "shopping", cost: 100 },
+        { id: uuidv4(), name: "books", cost: 500 },
+      ],
       setExpenses: (newExpenses: IExpenses[]) => {
         setExpensesContext((ctx) => ({ ...ctx, expenses: newExpenses }));
       },
