@@ -9,16 +9,16 @@ interface IProps {
 }
 
 export const ListItem: React.FC<IProps> = ({ buy }) => {
-  const { expenses, setExpenses } = useExpensesContext();
+  const { deleteExpense } = useExpensesContext();
 
-  const deleteBuy = () => {
-    const newExpenses = expenses.filter((expense) => expense.id !== buy.id);
-
-    setExpenses(newExpenses);
+  const handleDelete = () => {
+    deleteExpense(buy.id);
   };
+
   return (
     <StyledListItem>
-      {buy.name} <Badge cost={buy.cost} /> <Close onClick={deleteBuy} />
+      {buy.name} <Badge cost={buy.cost} />
+      <Close onClick={handleDelete} />
     </StyledListItem>
   );
 };

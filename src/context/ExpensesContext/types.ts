@@ -7,6 +7,7 @@ export interface IExpensesContexProviderProprs {
 export interface IExpensesContex {
   expenses: IExpenses[];
   setExpenses: (newExpenses: IExpenses[]) => void;
+  deleteExpense: (id: string) => void;
 }
 
 export interface IExpenses {

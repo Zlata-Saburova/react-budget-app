@@ -8,6 +8,7 @@ import {
 const ExpensesContext = createContext<IExpensesContex>({
   expenses: [],
   setExpenses: (newExpenses: IExpenses[]) => {},
+  deleteExpense: (id: string) => {},
 });
 
 const useExpensesContexValue = () => {
@@ -16,6 +17,12 @@ const useExpensesContexValue = () => {
       expenses: [],
       setExpenses: (newExpenses: IExpenses[]) => {
         setExpensesContext((ctx) => ({ ...ctx, expenses: newExpenses }));
+      },
+      deleteExpense: (id: string) => {
+        setExpensesContext((ctx) => ({
+          ...ctx,
+          expenses: ctx.expenses.filter((expense) => expense.id !== id),
+        }));
       },
     })
   );
