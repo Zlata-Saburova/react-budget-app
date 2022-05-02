@@ -15,9 +15,11 @@ export const CustomSelect = () => {
 
   const [selectCurrency, setselectCurrency] = useState<IOption>();
 
-  const handleSelect = (option: any) => {
-    setselectCurrency(option);
-    setCurrency(option.value);
+  const handleSelect = (option: IOption | null) => {
+    if (option) {
+      setselectCurrency(option);
+      setCurrency(option.value);
+    }
   };
 
   return (
