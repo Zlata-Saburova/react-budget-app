@@ -8,7 +8,7 @@ interface IProps {
   buy: IExpenses;
 }
 
-export const ListItem: React.FC<IProps> = ({ buy }) => {
+export const ListItem = ({ buy }: IProps) => {
   const { deleteExpense } = useExpensesContext();
 
   const handleDelete = () => {

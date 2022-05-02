@@ -1,14 +1,11 @@
 import { ReactNode } from "react";
 import { StyledEditButton } from "./styles";
 
-interface Iprops {
+interface IProps {
   children: ReactNode;
   handleEditButton: () => void;
 }
-export const EditButton: React.FC<Iprops> = ({
-  children,
-  handleEditButton,
-}) => {
+export const EditButton = ({ children, handleEditButton }: IProps) => {
   return (
     <StyledEditButton onClick={handleEditButton}>{children}</StyledEditButton>
   );

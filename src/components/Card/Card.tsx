@@ -7,6 +7,6 @@ interface IProps {
   isEdit?: boolean;
 }
 
-export const Card: React.FC<IProps> = ({ type, children }) => {
+export const Card = ({ type, children }: IProps) => {
   return <StyledCard type={type}>{children}</StyledCard>;
 };
