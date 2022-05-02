@@ -13,6 +13,7 @@ import { useBudgetContext } from "./context/BudgetContext/BudgetContext";
 import { SaveButton } from "./components/SaveButton/SaveButton";
 import { useExpensesContext } from "./context/ExpensesContext/ExpensesContext";
 import { useCurrencyContex } from "./context/CurrencyContext/CurrencyContext";
+import { IExpenses } from "./context/ExpensesContext/types";
 
 const App = () => {
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -62,6 +63,22 @@ const App = () => {
     }
   }, [spent, budget]);
 
+  const [findValue, setFindValue] = useState<string>("");
+  const [findedExpenses, setFindedExpenses] = useState<IExpenses[]>([]);
+
+  const handlerSearch = (e: ChangeEvent<HTMLInputElement>) => {
+    setFindValue(e.target.value);
+  };
+
+  useEffect(() => {
+    const findExpenses = expenses;
+    setFindedExpenses(
+      findExpenses.filter((buy) =>
+        buy.name.toLowerCase().includes(findValue.toLowerCase())
+      )
+    );
+  }, [findValue, expenses]);
+
   const { currency } = useCurrencyContex();
   return (
     <StyledApp>
@@ -94,8 +111,8 @@ const App = () => {
       </Container>
       <Container>
         <Title>Expenses</Title>
-        <SearchInput />
-        <List></List>
+        <SearchInput findValue={findValue} handlerSearch={handlerSearch} />
+        <List findedExpenses={findedExpenses}></List>
       </Container>
       <Container>
         <Title>Add Expense</Title>
