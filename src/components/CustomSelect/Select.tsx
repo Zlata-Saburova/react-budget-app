@@ -2,7 +2,11 @@ import { useState } from "react";
 import Select from "react-select";
 import { Currency } from "../../config/Currency";
 import { useCurrencyContex } from "../../context/CurrencyContext/CurrencyContext";
-import { IOption } from "../../types/types";
+
+interface IOption {
+  value: Currency;
+  label: keyof typeof Currency;
+}
 
 const options: IOption[] = [
   { value: Currency.USD, label: "USD" },
